@@ -40,7 +40,7 @@ public class MessageServiceImpl implements MessageService{
     private ExecutorService executorPool;
 
     private static final String GROUP_ID = "testgroup001";
-    private static final String ZK = "hostb1:2181,hostb2:2181,hostb3:2181";
+    private static final String ZK = "192.168.127.139:2181,192.168.127.139:2182,192.168.127.139:2183";
     private static final String TOPIC = "test002";
     private static final int THREAD_NUM = 2;
 

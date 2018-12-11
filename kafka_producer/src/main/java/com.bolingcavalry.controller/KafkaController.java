@@ -27,6 +27,7 @@ public class KafkaController {
 	 */
 	private void addCommon(String topic, Model model){
 		if(null==model){
+
 			return;
 		}
 		model.addAttribute("topic", topic);

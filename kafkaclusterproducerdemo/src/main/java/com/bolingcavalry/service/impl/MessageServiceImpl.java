@@ -19,6 +19,7 @@ import java.util.Properties;
 @Service
 public class MessageServiceImpl implements MessageService{
 
+    public static final String IP = "192.168.127.139:";
     private Producer<String, String> producer = null;
 
     @PostConstruct
@@ -26,8 +27,8 @@ public class MessageServiceImpl implements MessageService{
         try {
             Properties props = new Properties();
             props.put("serializer.class", "kafka.serializer.StringEncoder");
-            props.put("zk.connect", "hostb1:2181,hostb1:2181,hostb1:2181");
-            props.put("metadata.broker.list", "hostb1:9092,hostb1:9092,hostb1:9092");
+            props.put("zk.connect", IP + "2181," + IP +"2182," + IP +":2183");
+            props.put("metadata.broker.list", IP +"9092," + IP +"9092," + IP +"9092");
             props.put("partitioner.class","com.bolingcavalry.service.BusinessPartition");
             producer = new kafka.javaapi.producer.Producer<String, String>(new ProducerConfig(props));
         } catch (Exception e) {

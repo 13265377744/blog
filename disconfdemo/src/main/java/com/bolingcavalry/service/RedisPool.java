@@ -4,8 +4,6 @@ import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisPool;
 import redis.clients.jedis.JedisPoolConfig;
 
-import java.util.concurrent.locks.ReentrantLock;
-
 /**
  * @author willzhao
  * @version V1.0
@@ -17,12 +15,12 @@ public class RedisPool {
     /**
      * redis服务器ip
      */
-    private final static String ADDR = "127.0.0.1";
+    private final static String ADDR = "192.168.127.139";
 
     /**
      * redis服务器端口
      */
-    private final static int PORT = 6379;
+    private final static int PORT = 9001;
 
     /**
      * 可用连接最大数目

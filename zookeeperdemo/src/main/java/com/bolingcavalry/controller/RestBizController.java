@@ -26,7 +26,7 @@ public class RestBizController {
 
         String value = null;
         try {
-            final ZooKeeper zookeeper = new ZooKeeper("127.0.0.1:2181", 999999, watcher);
+            final ZooKeeper zookeeper = new ZooKeeper("192.168.127.139:2181", 999999, watcher);
             final byte[] data = zookeeper.getData("/node_1", watcher, null);
             value = new String(data);
             zookeeper.close();
